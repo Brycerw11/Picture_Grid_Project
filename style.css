@@ -1,46 +1,56 @@
+/* Makes sure nav bar doesnt have any margin */
 * {
     margin: 0;
 }
+
 nav{
     display: block;
     background-color: rgb(220, 172, 172);
-    margin: 0;
-    padding: 10px 0 10px 0;
+    padding: 20px 0 20px 0;
 }
 nav > a {
     padding: 0 6px 0 6px;  
     text-decoration: none;
 }
 
+/* Increases margin at start of nav bar */
 .startMargin {
     margin-left: 30px;
 }
 
+/* Makes sure everything other than the nav bar has a margin of 8px (default on chrome) */
 main{
     margin: 8px; 
 }
 
+/* Set up grid */
 .imageGrid {
     display: grid;
-    /* overflow: hidden; */
+    overflow: hidden;
     grid-template-columns: repeat(5, 1fr); /* 5 columns of Equal Width */
-    grid-template-rows: 1fr 1fr 2fr 4fr 3fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 4fr 3fr 2fr 2fr 2fr;
     gap: 5px;
+
+    /* Grid Layout */
     grid-template-areas: "logo logo logo logo facebook"
                          "logo logo logo logo twitter"
                          "logo logo logo logo masks"
                          "bDayParties bDayParties joker allAges wigs"
                          "musicals superSale superSale candy greatPrice"
-                         "musicals . . . ."
-                         /* "musicals christmas classic classic freeShipping" */
-                         /* "props . . . ." */
+                         "musicals christmas classic classic freeShipping"
+                         "props christmas halloweenLeft halloweenRight ghouls"
+                         "mysteryMask mardiGras mardiGras . address"
                         ;
 }
+
+/* Make images take up the whole grid box */
 .fitImage{
     width: 100%;
     height: 100%;
     display: block;
 }
+
+/* Apply each grid-area to the appropiate class */
 .logo {grid-area: logo;}
 .facebook {grid-area: facebook;}
 .twitter {grid-area: twitter;}
@@ -57,3 +67,25 @@ main{
 .christmas {grid-area: christmas;}
 .classic {grid-area: classic;}
 .freeShipping {grid-area: freeShipping;}
+.halloweenLeft {grid-area: halloweenLeft;}
+.halloweenRight {grid-area: halloweenRight;}
+.ghouls {grid-area: ghouls;}
+.mysteryMask {grid-area: mysteryMask;}
+.mardiGras {grid-area: mardiGras;}
+
+.address {
+    /* Apply Address grid area to Address class */
+    grid-area: address;
+    /* Move the div to the bottom of the grid box */
+    align-content: end;
+}
+.address > address {
+    display: flex; /* justify-content doesn't work with block elements */
+
+    /* Move Address tag to the right of the div (can't apply directly to div since it already takes up the whole width of the grid box) */
+    justify-content: end; 
+    text-align: end; /* Align text to the right of the Address tag */
+
+    font-size: 20.5px;
+    color: rgb(168, 109, 0);
+}
