@@ -28,8 +28,10 @@ main{
     display: grid;
     overflow: hidden;
     grid-template-columns: repeat(5, 1fr); /* 5 columns of Equal Width */
-    grid-template-rows: 1fr 1fr 2fr 4fr 3fr 2fr 2fr 2fr;
+    grid-template-rows: .9fr .9fr 2fr 4fr 3fr 2fr 2fr 2fr;
     gap: 5px;
+
+
 
     /* Grid Layout */
     grid-template-areas: "logo logo logo logo facebook"
