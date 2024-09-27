@@ -30,6 +30,10 @@ main{
                          "logo logo logo logo twitter"
                          "logo logo logo logo masks"
                          "bDayParties bDayParties joker allAges wigs"
+                         "musicals superSale superSale candy greatPrice"
+                         "musicals . . . ."
+                         /* "musicals christmas classic classic freeShipping" */
+                         /* "props . . . ." */
                         ;
 }
 .fitImage{
@@ -45,3 +49,11 @@ main{
 .joker {grid-area: joker;}
 .allAges {grid-area: allAges;}
 .wigs {grid-area: wigs;}
+.musicals {grid-area: musicals;}
+.superSale {grid-area: superSale;}
+.candy {grid-area: candy;}
+.greatPrice {grid-area: greatPrice;}
+.props {grid-area: props;}
+.christmas {grid-area: christmas;}
+.classic {grid-area: classic;}
+.freeShipping {grid-area: freeShipping;}
